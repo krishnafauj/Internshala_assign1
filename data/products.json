@@ -4,7 +4,7 @@
     "name": "Classic T-Shirt",
     "slug": "classic-t-shirt",
     "description": "A comfortable and stylish 100% cotton t-shirt.",
-    "price": 25.00,
+    "price": 25,
     "category": "Apparel",
     "inventory": 150,
     "lastUpdated": "2025-10-31T10:00:00Z"
@@ -20,13 +20,23 @@
     "lastUpdated": "2025-10-30T14:30:00Z"
   },
   {
-    "id":"p3",
+    "id": "p3",
     "name": "Smart Coffee Mug",
     "slug": "smart-coffee-mug",
     "description": "Keeps your drink at the perfect temperature.",
-    "price": 89.50,
+    "price": 89.5,
     "category": "Gadgets",
     "inventory": 40,
     "lastUpdated": "2025-10-31T08:15:00Z"
+  },
+  {
+    "id": "e5a3206e-b206-4c50-ab01-bad58d74a3b0",
+    "name": "smart watch",
+    "slug": "smart-watch",
+    "description": "hi",
+    "price": 122,
+    "category": "electronics",
+    "inventory": 10,
+    "lastUpdated": "2025-10-31T17:28:37.934Z"
   }
 ]
