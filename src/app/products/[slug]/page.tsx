@@ -17,17 +17,10 @@ export async function generateStaticParams() {
 }
 
 async function getProduct(slug: string): Promise<Product | null> {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseURL}/api/products/${slug}`, {
-    next: { revalidate: 60 },
-  });
-
-  if (!res.ok) {
-    return null;
-  }
-
-  const data: { product: Product } = await res.json();
-  return data.product;
+  const filePath = path.join(process.cwd(), "data", "products.json");
+  const file = await fs.readFile(filePath, "utf8");
+  const products: Product[] = JSON.parse(file);
+  return products.find((p) => p.slug === slug) || null;
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {

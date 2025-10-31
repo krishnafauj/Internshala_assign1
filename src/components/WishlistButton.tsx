@@ -21,7 +21,7 @@ export default function WishlistButton({ productId, productName }: { productId: 
         rounded-lg shadow-md
         transition-all duration-300
         disabled:opacity-70
-        bg-gradient-to-r 
+        bg-linear-to-r 
         from-teal-400 to-blue-500 
         text-white
         hover:from-teal-500 hover:to-blue-600

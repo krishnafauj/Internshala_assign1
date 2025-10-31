@@ -1,18 +1,9 @@
 import { Product } from '@/types';
 import Link from 'next/link';
+import { getAllProducts } from "@/lib/products";
 
 async function getInventoryData() {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseURL}/api/products`, {
-    cache: 'no-store', 
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch product data');
-  }
-  
-  const data: { products: Product[] } = await res.json();
-  return data.products;
+  return await getAllProducts(); // Direct FS access — no fetch
 }
 
 // Enhanced Stat Card Component

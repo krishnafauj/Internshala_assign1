@@ -1,30 +1,19 @@
 import { Product } from '@/types';
 import WishlistButton from './WishlistButton'; // Import our Client Component
-
+import { promises as fs } from "fs";
+import path from "path";
 /**
  * This is also a SERVER COMPONENT.
  * It is asynchronous, which allows it to fetch data.
  * It's designed to be used within a <Suspense> boundary.
  */
 async function getRecommendedProducts() {
-  // We use 'no-store' to ensure this fetches fresh data every time,
-  // simulating a dynamic recommendation engine.
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseURL}/api/products`, {
-    cache: 'no-store',
-  });
+  const filePath = path.join(process.cwd(), "data", "products.json");
+  const file = await fs.readFile(filePath, "utf8");
+  const products: Product[] = JSON.parse(file);
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch recommended products');
-  }
-
-  const data: { products: Product[] } = await res.json();
-  
-  // Simulate a delay to show the loading fallback
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  // Just recommend the first 3 products for this demo
-  return data.products.slice(0, 3);
+  await new Promise((r) => setTimeout(r, 1000)); // delay effect
+  return products.slice(0, 3);
 }
 
 

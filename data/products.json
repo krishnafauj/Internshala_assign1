@@ -38,5 +38,15 @@
     "category": "electronics",
     "inventory": 10,
     "lastUpdated": "2025-10-31T17:28:37.934Z"
+  },
+  {
+    "id": "708d3887-0dd3-4149-81e3-595356f45f8f",
+    "name": "hi",
+    "slug": "hi",
+    "description": "nothing",
+    "price": 121,
+    "category": "ele",
+    "inventory": 100,
+    "lastUpdated": "2025-10-31T19:15:52.206Z"
   }
 ]

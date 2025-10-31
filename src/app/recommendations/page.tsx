@@ -12,7 +12,7 @@ export default async function RecommendationsPage() {
       <h1 className="
         text-5xl font-extrabold mb-4 
         text-transparent bg-clip-text 
-        bg-gradient-to-r from-blue-400 to-teal-400
+        bg-linear-to-r from-blue-400 to-teal-400
         drop-shadow-md
       ">
         Our Recommendations

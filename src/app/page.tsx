@@ -1,22 +1,10 @@
 import { Product } from '@/types';
 import ProductList from '@/components/ProductList';
+import { getAllProducts } from "@/lib/products";
 
-async function getProducts() {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseURL}/api/products`, {
-    cache: 'force-cache',
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch products');
-  }
-  
-  const data: { products: Product[] } = await res.json();
-  return data.products;
-}
 
 export default async function HomePage() {
-  const products = await getProducts();
+  const products = await getAllProducts();
 
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
