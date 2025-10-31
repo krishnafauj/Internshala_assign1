@@ -3,12 +3,13 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import { Product } from '@/types';
 
-// The context parameter contains the dynamic part of the URL (the slug)
+// Updated function signature for Next.js 15+
 export async function GET(
   request: Request, 
-  context: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = context.params;
+  // Await the params Promise
+  const { slug } = await params;
 
   // Get the path to our data file
   const jsonDirectory = path.join(process.cwd(), 'data');
