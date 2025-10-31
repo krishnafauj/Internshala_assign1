@@ -1,4 +1,4 @@
-ext.js E-Commerce Project
+Next.js E-Commerce Project
 
 This is a simple e-commerce website built using Next.js App Router, React, and Tailwind CSS.
 
@@ -16,28 +16,17 @@ Environment variable setup
 
 🚀 Installation & Setup
 1️⃣ Clone the Repository
-git clone <your-repo-link>
-cd <your-project-folder>
+git clone https://github.com/krishnafauj/Internshala_assign1
 
 2️⃣ Install Dependencies
 npm install
-
-3️⃣ Setup Environment Variables
-
-Create a .env.local file:
-
-BASE_URL=http://localhost:3000
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-NEXTAUTH_URL=http://localhost:3000
-
-
-(An .env.example file is included for reference)
-
-4️⃣ Run the Project
 npm run dev
+<img width="2878" height="1566" alt="image" src="https://github.com/user-attachments/assets/9d07ae61-a6b7-4786-b0d1-0d543cab8f76" />
+
+<img width="2878" height="1568" alt="image" src="https://github.com/user-attachments/assets/0c87dc0d-de56-4b8b-b7ca-920dfc5c72dd" />
 
 
-Now open in browser:
+Now open in browser: https://internshala-assign1-git-master-krishnafaujs-projects.vercel.app/
 
 http://localhost:3000
 
