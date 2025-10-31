@@ -2,7 +2,8 @@ import { Product } from '@/types';
 import Link from 'next/link';
 
 async function getInventoryData() {
-  const res = await fetch('http://localhost:3000/api/products', {
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseURL}/api/products`, {
     cache: 'no-store', 
   });
 

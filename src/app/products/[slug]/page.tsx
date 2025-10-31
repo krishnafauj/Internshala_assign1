@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 async function getProduct(slug: string): Promise<Product | null> {
-  const res = await fetch(`http://localhost:3000/api/products/${slug}`, {
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseURL}/api/products/${slug}`, {
     next: { revalidate: 60 },
   });
 
