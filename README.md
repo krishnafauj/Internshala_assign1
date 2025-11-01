@@ -59,8 +59,7 @@ http://localhost:3000
 
 🌍 Live Demo
 
-🔗 https://internshala-assign1-git-master-krishnafaujs-projects.vercel.app/
-
+🔗 https://internshala-assign1.vercel.app/
 ⚙️ Environment Variable
 
 Create a .env.local file:
